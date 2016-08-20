@@ -10,7 +10,10 @@ public class Menu {
     private BigDecimal valor1;
     private BigDecimal valor2;
 
-    private final static String COMANDOS_MSG = "(0) - Sair  | (somar) - Somar 2 números | (subtrair) - Subtrair 2 números | (multiplicar) - Multiplicar 2 números | (dividir) - Dividir 2 números |(modulo) - Resto da divisão de 2 números";
+    private final static String COMANDOS_MSG = "(0) - Sair  | (somar) - Somar 2 números | " +
+            "(subtrair) - Subtrair 2 números | (multiplicar) - Multiplicar 2 números | " +
+            "(dividir) - Dividir 2 números |(modulo) - Resto da divisão de 2 números | " +
+            "(potencia) - Potênciação de dois números";
 
     public void exibirMenu(final Scanner scanner){
 
@@ -36,6 +39,7 @@ public class Menu {
                 return valor;
             }catch (Exception e){
                 valor = null;
+                scanner.nextLine();
             }
 
         }while (valor == null);

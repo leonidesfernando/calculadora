@@ -89,6 +89,22 @@ public enum Operacao {
         protected String getMensagemInvalido(BigDecimal valor1, BigDecimal valor2) {
             return String.format("Os valores não podem ser nulos ou o segundo número ser zero para a operação de módulo, primeiro número(%f) segundo número(%f)", valor1, valor2);
         }
+    },
+    POTENCIA(Constantes.COMANDO_POTENCIACAO){
+        @Override
+        protected BigDecimal efetuar(BigDecimal valor1, BigDecimal valor2) {
+            return valor1.pow(valor2.intValue());
+        }
+
+        @Override
+        protected boolean isValido(BigDecimal valor1, BigDecimal valor2) {
+            return (valor1 != null && valor2 != null);
+        }
+
+        @Override
+        protected String getMensagemInvalido(BigDecimal valor1, BigDecimal valor2) {
+            return String.format("Os valores não podem ser nulos para a potenciação, primeiro número(%f) segundo número(%f)", valor1, valor2);
+        }
     }
 
     ;
