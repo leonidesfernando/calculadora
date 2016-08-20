@@ -8,6 +8,6 @@ public interface Constantes {
     public static final String COMANDO_MULTIPLICACAO = "*";
     public static final String COMANDO_POTENCIACAO = "pow";
     public static final String COMANDO_RAIZ_2 = "sqrt2";
-    public static final String COMANDO_MODULO = "mod";
+    public static final String COMANDO_MODULO = "%";
     public static final String COMANDO_RAIZ_3 = "sqrt3";
 }

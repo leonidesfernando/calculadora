@@ -2,9 +2,7 @@ package com.github.leonidesfernando.main;
 
 
 import com.github.leonidesfernando.calculadora.Menu;
-import com.github.leonidesfernando.calculadora.Operacao;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -15,14 +13,14 @@ public class Calculadora {
 
         Menu menu = new Menu();
 
-        menu.exibirMenu(scanner);
+        do{
+            menu.exibirMenu(scanner);
+            if(!menu.isSair()){
+                menu.getOperacao().imprimeResultado(menu.getValor1(), menu.getValor2());
+            }
 
-        String cmd = "somar";
-        BigDecimal valor1 =null;
-        BigDecimal valor2 = BigDecimal.TEN;
+        }while (!menu.isSair());
 
-
-         Operacao.valueOf(cmd.toUpperCase()).imprimeResultado(valor1, valor2);
-
+        scanner.close();
     }
 }
