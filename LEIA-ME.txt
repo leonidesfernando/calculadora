@@ -1,0 +1,7 @@
+Requisitos para executar este programa: Java8, Postgres e Maven.
+
+Passsos para executar esse programa
+1. descompacte o arquivo tarefa42.zip
+2. Executanto:
+2.1 Fora de uma IDE, abra o console entre no diretório calculadora e digite: mvn exe:java
+2.2 Dentro de uma IDE, importe o projeto e mande executar a classe com.github.leonidesfernando.main.Calculadora
